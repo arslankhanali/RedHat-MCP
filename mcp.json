@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "kubernetes-mcp-server": {
+      "command": "npx -y kubernetes-mcp-server@latest",
+      "env": {},
+      "args": []
+    },
+    "podman-mcp-server": {
+      "command": "npx -y podman-mcp-server@latest",
+      "env": {},
+      "args": []
+    },
+    "linux-diagnostics": {
+      "command": "uvx",
+      "args": ["linux-mcp-server"],
+      "env": {
+        "LINUX_MCP_ALLOWED_LOG_PATHS": "/var/log/messages,/var/log/secure,/var/log/audit/audit.log"
+      }
+    }
+  }
+}
